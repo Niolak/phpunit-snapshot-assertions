@@ -1,5 +1,5 @@
 {
-    "name": "spatie/phpunit-snapshot-assertions",
+    "name": "niolak/phpunit-snapshot-assertions",
     "description": "Snapshot testing with PHPUnit",
     "keywords": [
         "spatie",
