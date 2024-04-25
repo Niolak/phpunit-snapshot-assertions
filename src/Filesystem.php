@@ -59,6 +59,7 @@ class Filesystem
     {
         if (! file_exists($this->basePath)) {
             mkdir($this->basePath, 0777, true);
+            chmod($this->basePath, 0777);
         }
 
         file_put_contents($this->path($filename), $contents);
@@ -74,6 +75,7 @@ class Filesystem
     {
         if (! file_exists($this->basePath)) {
             mkdir($this->basePath, 0777, true);
+            chmod($this->basePath, 0777);
         }
 
         copy($filePath, $this->path($fileName));
