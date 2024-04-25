@@ -62,6 +62,7 @@ class Filesystem
         }
 
         file_put_contents($this->path($filename), $contents);
+        chmod($this->path($filename), 0666);
     }
 
     public function delete(string $fileName): bool
@@ -76,6 +77,7 @@ class Filesystem
         }
 
         copy($filePath, $this->path($fileName));
+        chmod($this->path($filename), 0666);
     }
 
     public function fileEquals(string $filePath, string $fileName): bool
